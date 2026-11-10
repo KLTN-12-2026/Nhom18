@@ -1,0 +1,40 @@
+{
+  "name": "movie-booking-backend",
+  "version": "1.0.0",
+  "description": "Movie Booking System Backend with AI Chatbot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest",
+    "test-ai": "node test-ai-chatbot.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "express-validator": "^7.0.1",
+    "socket.io": "^4.6.1",
+    "node-cron": "^3.0.2",
+    "crypto": "^1.0.1",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  },
+  "keywords": [
+    "movie",
+    "booking",
+    "cinema",
+    "ai",
+    "chatbot",
+    "gemini"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

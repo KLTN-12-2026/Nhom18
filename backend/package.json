@@ -1,0 +1,53 @@
+{
+  "name": "movie-booking-backend",
+  "version": "1.0.0",
+  "description": "Movie Booking System Backend API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest --detectOpenHandles",
+    "init-db": "node scripts/init-database.js",
+    "seed-today": "node scripts/add-showtimes-today.js",
+    "migrate:seat-locking": "node scripts/run-seat-locking-migration.js",
+    "migrate:combos-payment": "node scripts/run-combos-payment-migration.js",
+    "generate:jwt-secret": "node -e \"console.log('Your new JWT_SECRET:'); console.log(require('crypto').randomBytes(64).toString('hex'))\"",
+    "tunnel": "npx --yes localtunnel@2 --port 5000 --subdomain cinemagold-dev",
+    "check:payment": "node scripts/kiem-tra-thanh-toan.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^7.0.13",
+    "qrcode.react": "^4.2.0",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "node-mocks-http": "^1.17.2",
+    "nodemon": "^3.1.11",
+    "qs": "^6.13.0"
+  },
+  "keywords": [
+    "movie",
+    "booking",
+    "api",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "Movie Booking System",
+  "license": "MIT"
+}
